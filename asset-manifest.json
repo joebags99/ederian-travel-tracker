@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ederian-travel-tracker/static/css/main.e0cdd220.css",
+    "main.css": "/ederian-travel-tracker/static/css/main.7a4a3b9e.css",
     "main.js": "/ederian-travel-tracker/static/js/main.dccf79fe.js",
     "static/js/453.b6bbf4b0.chunk.js": "/ederian-travel-tracker/static/js/453.b6bbf4b0.chunk.js",
     "index.html": "/ederian-travel-tracker/index.html",
-    "main.e0cdd220.css.map": "/ederian-travel-tracker/static/css/main.e0cdd220.css.map",
+    "main.7a4a3b9e.css.map": "/ederian-travel-tracker/static/css/main.7a4a3b9e.css.map",
     "main.dccf79fe.js.map": "/ederian-travel-tracker/static/js/main.dccf79fe.js.map",
     "453.b6bbf4b0.chunk.js.map": "/ederian-travel-tracker/static/js/453.b6bbf4b0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0cdd220.css",
+    "static/css/main.7a4a3b9e.css",
     "static/js/main.dccf79fe.js"
   ]
 }
