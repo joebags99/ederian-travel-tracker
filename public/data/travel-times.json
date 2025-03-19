@@ -1,0 +1,308 @@
+{
+  "Crown's Rest": {
+    "Highfields": { 
+      "modes": {
+        "caravan": { "distance": 240 },
+        "ryanite-rail-standard": { "distance": 250 },
+        "ryanite-rail-1st": { "distance": 250 },
+        "airship-ederia": { "distance": 195 }
+      }
+    },
+    "Stonewatch": { 
+      "modes": {
+        "caravan": { "distance": 220 },
+        "ryanite-rail-standard": { "distance": 150 },
+        "ryanite-rail-1st": { "distance": 150 },
+        "airship-ederia": { "distance": 150 }
+      }
+    },
+    "Faithspire": { 
+      "modes": {
+        "caravan": { "distance": 200 },
+        "ryanite-rail-standard": { "distance": 150 },
+        "ryanite-rail-1st": { "distance": 150 },
+        "ship-shared": { "distance": 137 },
+        "ship-private": { "distance": 137 },
+        "airship-ederia": { "distance": 105 }
+      }
+    },
+    "Skyhaven": { 
+      "modes": {
+        "ship-shared": { "distance": 105 },
+        "ship-private": { "distance": 105 },
+        "airship-ederia": { "distance": 118 }
+      }
+    },
+    "Kraken's Reach": { 
+      "modes": {
+        "ship-shared": { "distance": 165 },
+        "ship-private": { "distance": 165 },
+        "airship-ederia": { "distance": 170 }
+      }
+    },
+    "Tomehold": { 
+      "modes": {
+        "ryanite-rail-standard": { "distance": 100 },
+        "ryanite-rail-1st": { "distance": 100 },
+        "ship-shared": { "distance": 110 },
+        "ship-private": { "distance": 110 },
+        "airship-ederia": { "distance": 94 }
+      }
+    }
+  },
+  "Skyhaven": {
+    "Crown's Rest": { 
+      "modes": {
+        "ship-shared": { "distance": 105 },
+        "ship-private": { "distance": 105 },
+        "airship-ederia": { "distance": 118 }
+      }
+    },
+    "Highfields": { 
+      "modes": {
+        "airship-ederia": { "distance": 310 }
+      }
+    },
+    "Stonewatch": { 
+      "modes": {
+        "airship-ederia": { "distance": 235 }
+      }
+    },
+    "Kraken's Reach": { 
+      "modes": {
+        "ship-shared": { "distance": 240 },
+        "ship-private": { "distance": 240 },
+        "airship-ederia": { "distance": 260 }
+      }
+    },
+    "Tomehold": { 
+      "modes": {
+        "ryanite-rail-standard": { "distance": 280 },
+        "ryanite-rail-1st": { "distance": 280 },
+        "ship-shared": { "distance": 190 },
+        "ship-private": { "distance": 190 },
+        "airship-ederia": { "distance": 190 }
+      }
+    },
+    "Faithspire": { 
+      "modes": {
+        "ship-shared": { "distance": 120 },
+        "ship-private": { "distance": 120 },
+        "airship-ederia": { "distance": 130 }
+      }
+    }
+  },
+  "Highfields": {
+    "Crown's Rest": { 
+      "modes": {
+        "caravan": { "distance": 240 },
+        "ryanite-rail-standard": { "distance": 250 },
+        "ryanite-rail-1st": { "distance": 250 },
+        "airship-ederia": { "distance": 195 }
+      }
+    },
+    "Skyhaven": { 
+      "modes": {
+        "airship-ederia": { "distance": 310 }
+      }
+    },
+    "Stonewatch": { 
+      "modes": {
+        "caravan": { "distance": 300 },
+        "ryanite-rail-standard": { "distance": 100 },
+        "ryanite-rail-1st": { "distance": 100 },
+        "airship-ederia": { "distance": 110 }
+      }
+    },
+    "Faithspire": { 
+      "modes": {
+        "caravan": { "distance": 290 },
+        "airship-ederia": { "distance": 214 }
+      }
+    },
+    "Kraken's Reach": { 
+      "modes": {
+        "airship-ederia": { "distance": 280 }
+      }
+    },
+    "Tomehold": { 
+      "modes": {
+        "caravan": { "distance": 300 },
+        "airship-ederia": { "distance": 219 }
+      }
+    }
+  },
+  "Stonewatch": {
+    "Crown's Rest": { 
+      "modes": {
+        "caravan": { "distance": 220 },
+        "ryanite-rail-standard": { "distance": 150 },
+        "ryanite-rail-1st": { "distance": 150 },
+        "airship-ederia": { "distance": 150 }
+      }
+    },
+    "Skyhaven": { 
+      "modes": {
+        "airship-ederia": { "distance": 235 }
+      }
+    },
+    "Highfields": { 
+      "modes": {
+        "caravan": { "distance": 300 },
+        "ryanite-rail-standard": { "distance": 100 },
+        "ryanite-rail-1st": { "distance": 100 },
+        "airship-ederia": { "distance": 110 }
+      }
+    },
+    "Faithspire": { 
+      "modes": {
+        "caravan": { "distance": 140 },
+        "ryanite-rail-standard": { "distance": 130 },
+        "ryanite-rail-1st": { "distance": 130 },
+        "airship-ederia": { "distance": 125 }
+      }
+    },
+    "Kraken's Reach": { 
+      "modes": {
+        "airship-ederia": { "distance": 270 }
+      }
+    },
+    "Tomehold": { 
+      "modes": {
+        "airship-ederia": { "distance": 230 }
+      }
+    }
+  },
+  "Faithspire": {
+    "Crown's Rest": { 
+      "modes": {
+        "caravan": { "distance": 200 },
+        "ryanite-rail-standard": { "distance": 150 },
+        "ryanite-rail-1st": { "distance": 150 },
+        "ship-shared": { "distance": 137 },
+        "ship-private": { "distance": 137 },
+        "airship-ederia": { "distance": 105 }
+      }
+    },
+    "Skyhaven": { 
+      "modes": {
+        "ship-shared": { "distance": 120 },
+        "ship-private": { "distance": 120 },
+        "airship-ederia": { "distance": 130 }
+      }
+    },
+    "Highfields": { 
+      "modes": {
+        "caravan": { "distance": 290 },
+        "airship-ederia": { "distance": 214 }
+      }
+    },
+    "Stonewatch": { 
+      "modes": {
+        "caravan": { "distance": 140 },
+        "ryanite-rail-standard": { "distance": 130 },
+        "ryanite-rail-1st": { "distance": 130 },
+        "airship-ederia": { "distance": 125 }
+      }
+    },
+    "Kraken's Reach": { 
+      "modes": {
+        "ship-shared": { "distance": 340 },
+        "ship-private": { "distance": 340 },
+        "airship-ederia": { "distance": 272 }
+      }
+    },
+    "Tomehold": { 
+      "modes": {
+        "ship-shared": { "distance": 263 },
+        "ship-private": { "distance": 263 },
+        "airship-ederia": { "distance": 207 }
+      }
+    }
+  },
+  "Tomehold": {
+    "Crown's Rest": { 
+      "modes": {
+        "ryanite-rail-standard": { "distance": 100 },
+        "ryanite-rail-1st": { "distance": 100 },
+        "ship-shared": { "distance": 110 },
+        "ship-private": { "distance": 110 },
+        "airship-ederia": { "distance": 94 }
+      }
+    },
+    "Skyhaven": { 
+      "modes": {
+        "ryanite-rail-standard": { "distance": 280 },
+        "ryanite-rail-1st": { "distance": 280 },
+        "ship-shared": { "distance": 190 },
+        "ship-private": { "distance": 190 },
+        "airship-ederia": { "distance": 190 }
+      }
+    },
+    "Highfields": { 
+      "modes": {
+        "caravan": { "distance": 300 },
+        "airship-ederia": { "distance": 219 }
+      }
+    },
+    "Stonewatch": { 
+      "modes": {
+        "airship-ederia": { "distance": 230 }
+      }
+    },
+    "Faithspire": { 
+      "modes": {
+        "ship-shared": { "distance": 263 },
+        "ship-private": { "distance": 263 },
+        "airship-ederia": { "distance": 207 }
+      }
+    },
+    "Kraken's Reach": { 
+      "modes": {
+        "ship-shared": { "distance": 75 },
+        "ship-private": { "distance": 75 },
+        "airship-ederia": { "distance": 70 }
+      }
+    }
+  },
+  "Kraken's Reach": {
+    "Crown's Rest": { 
+      "modes": {
+        "ship-shared": { "distance": 165 },
+        "ship-private": { "distance": 165 },
+        "airship-ederia": { "distance": 170 }
+      }
+    },
+    "Skyhaven": { 
+      "modes": {
+        "ship-shared": { "distance": 240 },
+        "ship-private": { "distance": 240 },
+        "airship-ederia": { "distance": 260 }
+      }
+    },
+    "Highfields": { 
+      "modes": {
+        "airship-ederia": { "distance": 280 }
+      }
+    },
+    "Stonewatch": { 
+      "modes": {
+        "airship-ederia": { "distance": 270 }
+      }
+    },
+    "Faithspire": { 
+      "modes": {
+        "ship-shared": { "distance": 340 },
+        "ship-private": { "distance": 340 },
+        "airship-ederia": { "distance": 272 }
+      }
+    },
+    "Tomehold": { 
+      "modes": {
+        "ship-shared": { "distance": 75 },
+        "ship-private": { "distance": 75 },
+        "airship-ederia": { "distance": 70 }
+      }
+    }
+  }
+}

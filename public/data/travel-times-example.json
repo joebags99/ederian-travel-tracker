@@ -1,0 +1,62 @@
+{
+  "Royal Capital": {
+    "Thornefield": { 
+      "modes": {
+        "caravan": { "distance": 110 },
+        "ryanite-rail-standard": { "distance": 100 },
+        "ryanite-rail-1st": { "distance": 100 },
+        "airship-ederia": { "distance": 95 }
+      }
+    },
+    "Port Haven": { 
+      "modes": {
+        "caravan": { "distance": 170 },
+        "ryanite-rail-standard": { "distance": 150 },
+        "ryanite-rail-1st": { "distance": 150 },
+        "ship-shared": { "distance": 180 },
+        "ship-private": { "distance": 180 },
+        "airship-ederia": { "distance": 145 }
+      }
+    },
+    "Drakemoor Hold": { 
+      "modes": {
+        "caravan": { "distance": 135 },
+        "airship-ederia": { "distance": 120 }
+      }
+    }
+  },
+  "Thornefield": {
+    "Royal Capital": { 
+      "modes": {
+        "caravan": { "distance": 110 },
+        "ryanite-rail-standard": { "distance": 100 },
+        "ryanite-rail-1st": { "distance": 100 },
+        "airship-ederia": { "distance": 95 }
+      }
+    },
+    "Forest Outpost": { 
+      "modes": {
+        "caravan": { "distance": 75 }
+      }
+    }
+  },
+  "Port Haven": {
+    "Royal Capital": {
+      "modes": {
+        "caravan": { "distance": 170 },
+        "ryanite-rail-standard": { "distance": 150 },
+        "ryanite-rail-1st": { "distance": 150 },
+        "ship-shared": { "distance": 180 },
+        "ship-private": { "distance": 180 },
+        "airship-ederia": { "distance": 145 }
+      }
+    },
+    "Veltaris Harbor": {
+      "modes": {
+        "caravan": { "distance": 130 },
+        "ship-shared": { "distance": 120 },
+        "ship-private": { "distance": 120 }
+      }
+    }
+  }
+}

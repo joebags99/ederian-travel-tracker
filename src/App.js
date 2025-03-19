@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Scroll, ShoppingCart, Menu, X, ChevronRight, Minus, Plus, Info, Shield, Ship, Map, Home, Sparkles, Crown, Coffee } from 'lucide-react';
 import './App.css';
+import RoutePlanner from './RoutePlanner';
 
 function App() {
   // State management
@@ -467,6 +468,17 @@ function App() {
               </button>
             ))}
           </div>
+          
+          {/* Route Planner - only show in travel tab */}
+          {activeTab === 'travel' && (
+            <div className="mb-6">
+              <RoutePlanner 
+                travelData={travelData} 
+                playerCount={playerCount} 
+                addToCart={addToCart} 
+              />
+            </div>
+          )}
           
           {/* Items Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
