@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Map, Navigation, Clock, DollarSign, Compass, PlaneTakeoff } from 'lucide-react';
+import RouteMapVisualization from './RouteMapVisualization';
 
 // We'll replace this with data loaded from the JSON file
 const defaultCityGraph = {
@@ -914,6 +915,11 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
             </button>
           )}
         </div>
+      )}
+      
+      {/* Add the RouteMapVisualization component here */}
+      {route && route.valid && (
+        <RouteMapVisualization route={route} cityGraph={cityGraph} />
       )}
       
       {route && !route.valid && (
