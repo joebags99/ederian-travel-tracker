@@ -139,8 +139,8 @@ function App() {
     
     const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
     
-    // Set days value based on standardDaysEnabled setting
-    const daysValue = standardDaysEnabled ? standardDays : 1;
+    // Set days value based on standardDaysEnabled setting or preserve item's days if flagged
+    const daysValue = item.preserveDays ? item.days : (standardDaysEnabled ? standardDays : 1);
     
     // For items with customizable price, use the default price initially
     let itemToAdd = { ...item };

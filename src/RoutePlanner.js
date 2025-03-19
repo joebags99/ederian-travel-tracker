@@ -710,10 +710,13 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
         const speed = getTransportSpeed(segment.mode, travelData);
         const days = Math.ceil(segment.distance / speed);
         
-        // Create a modified item with segment info
+        // Create a modified item with segment info and a unique ID
         const itemWithSegment = {
           ...transportItem,
-          segmentInfo: `${segment.from} → ${segment.to} (${segment.distance} miles)`
+          id: `${segment.mode}-${segment.from}-${segment.to}`, // Create unique ID for each segment
+          segmentInfo: `${segment.from} → ${segment.to} (${segment.distance} miles)`,
+          days: days, // Add the calculated days
+          preserveDays: true // Flag to preserve days value
         };
         
         // Add to cart with the calculated days
