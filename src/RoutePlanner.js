@@ -693,8 +693,8 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
   const addRouteToCart = () => {
     if (!route || !route.valid || !travelData || !travelData.travel) return;
     
-    // Add each segment's transport mode to the cart
-    route.segments.forEach(segment => {
+    // First, collect all items to add
+    const itemsToAdd = route.segments.map(segment => {
       // Find the transport item in travelData
       const standardModes = travelData.travel.standard || [];
       const premiumModes = travelData.travel.premium || [];
@@ -705,24 +705,28 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
       
       const transportItem = allTransportItems.find(item => item && item.id === segment.mode);
       
-      if (transportItem && addToCart) {
+      if (transportItem) {
         // Calculate days based on segment
         const speed = getTransportSpeed(segment.mode, travelData);
         const days = Math.ceil(segment.distance / speed);
         
         // Create a modified item with segment info and a unique ID
-        const itemWithSegment = {
+        return {
           ...transportItem,
           id: `${segment.mode}-${segment.from}-${segment.to}`, // Create unique ID for each segment
           segmentInfo: `${segment.from} → ${segment.to} (${segment.distance} miles)`,
           days: days, // Add the calculated days
           preserveDays: true // Flag to preserve days value
         };
-        
-        // Add to cart with the calculated days
-        addToCart(itemWithSegment);
       }
-    });
+      return null;
+    }).filter(item => item !== null);
+    
+    // Add all items to cart at once
+    if (addToCart && itemsToAdd.length > 0) {
+      // Add each item to cart
+      itemsToAdd.forEach(item => addToCart(item));
+    }
   };
   
   return (
