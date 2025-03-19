@@ -900,7 +900,7 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
                 
                 {addToCart && (
                   <button
-                    className="w-full mt-5 bg-gray-700 hover:bg-gray-600 font-bold py-3 rounded-lg flex items-center justify-center text-white text-base border border-gray-500 transition-colors duration-200"
+                    className="w-full mt-5 bg-amber-600 hover:bg-amber-700 font-bold py-3 rounded-lg flex items-center justify-center text-white text-base shadow-md transition-colors duration-200"
                     onClick={addRouteToCart}
                   >
                     <PlaneTakeoff size={18} className="mr-2" />
