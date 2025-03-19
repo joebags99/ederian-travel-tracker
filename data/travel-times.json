@@ -1,0 +1,261 @@
+{
+    "travelSpeeds": {
+      "caravan": 24,
+      "train": 36,
+      "ship": 48,
+      "airship": 96
+    },
+    "costPerMile": {
+      "caravan": 0.5,
+      "train": 1,
+      "ship": 1.5,
+      "airship": 3
+    },
+    "cities": [
+      "Crown's Rest",
+      "Skyhaven",
+      "Tomehold",
+      "Faithspire",
+      "Stonewatch",
+      "Highfields",
+      "Kraken's Reach"
+    ],
+    "connections": [
+      {
+        "from": "Crown's Rest",
+        "to": "Highfields",
+        "modes": {
+          "caravan": 240,
+          "train": 250,
+          "ship": null,
+          "airship": 195
+        }
+      },
+      {
+        "from": "Crown's Rest",
+        "to": "Stonewatch",
+        "modes": {
+          "caravan": 220,
+          "train": 150,
+          "ship": null,
+          "airship": 150
+        }
+      },
+      {
+        "from": "Crown's Rest",
+        "to": "Faithspire",
+        "modes": {
+          "caravan": 200,
+          "train": 150,
+          "ship": 137,
+          "airship": 105
+        }
+      },
+      {
+        "from": "Crown's Rest",
+        "to": "Skyhaven",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 105,
+          "airship": 118
+        }
+      },
+      {
+        "from": "Crown's Rest",
+        "to": "Kraken's Reach",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 165,
+          "airship": 170
+        }
+      },
+      {
+        "from": "Crown's Rest",
+        "to": "Tomehold",
+        "modes": {
+          "caravan": null,
+          "train": 100,
+          "ship": 110,
+          "airship": 94
+        }
+      },
+      {
+        "from": "Skyhaven",
+        "to": "Highfields",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": null,
+          "airship": 310
+        }
+      },
+      {
+        "from": "Skyhaven",
+        "to": "Stonewatch",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": null,
+          "airship": 235
+        }
+      },
+      {
+        "from": "Skyhaven",
+        "to": "Kraken's Reach",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 240,
+          "airship": 260
+        }
+      },
+      {
+        "from": "Skyhaven",
+        "to": "Tomehold",
+        "modes": {
+          "caravan": null,
+          "train": 280,
+          "ship": 190,
+          "airship": 190
+        }
+      },
+      {
+        "from": "Skyhaven",
+        "to": "Faithspire",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 120,
+          "airship": 130
+        }
+      },
+      {
+        "from": "Highfields",
+        "to": "Stonewatch",
+        "modes": {
+          "caravan": 300,
+          "train": 100,
+          "ship": null,
+          "airship": 110
+        }
+      },
+      {
+        "from": "Highfields",
+        "to": "Faithspire",
+        "modes": {
+          "caravan": 290,
+          "train": null,
+          "ship": null,
+          "airship": 214
+        }
+      },
+      {
+        "from": "Highfields",
+        "to": "Kraken's Reach",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": null,
+          "airship": 280
+        }
+      },
+      {
+        "from": "Highfields",
+        "to": "Tomehold",
+        "modes": {
+          "caravan": 300,
+          "train": null,
+          "ship": null,
+          "airship": 219
+        }
+      },
+      {
+        "from": "Stonewatch",
+        "to": "Faithspire",
+        "modes": {
+          "caravan": 140,
+          "train": 130,
+          "ship": null,
+          "airship": 125
+        }
+      },
+      {
+        "from": "Stonewatch",
+        "to": "Kraken's Reach",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": null,
+          "airship": 270
+        }
+      },
+      {
+        "from": "Stonewatch",
+        "to": "Tomehold",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": null,
+          "airship": 230
+        }
+      },
+      {
+        "from": "Faithspire",
+        "to": "Kraken's Reach",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 340,
+          "airship": 272
+        }
+      },
+      {
+        "from": "Faithspire",
+        "to": "Tomehold",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 263,
+          "airship": 207
+        }
+      },
+      {
+        "from": "Kraken's Reach",
+        "to": "Tomehold",
+        "modes": {
+          "caravan": null,
+          "train": null,
+          "ship": 75,
+          "airship": 70
+        }
+      }
+    ],
+    "transportInfo": {
+      "caravan": {
+        "description": "Slow but economical overland travel",
+        "comfortLevel": "Basic",
+        "weatherImpact": "High",
+        "luggageCapacity": "Medium"
+      },
+      "train": {
+        "description": "Good balance of speed and cost for land routes",
+        "comfortLevel": "Good",
+        "weatherImpact": "Low",
+        "luggageCapacity": "High"
+      },
+      "ship": {
+        "description": "Maritime travel between coastal cities",
+        "comfortLevel": "Moderate",
+        "weatherImpact": "High",
+        "luggageCapacity": "Very High"
+      },
+      "airship": {
+        "description": "Premium, fastest travel between all major cities",
+        "comfortLevel": "Excellent",
+        "weatherImpact": "Medium",
+        "luggageCapacity": "Low"
+      }
+    }
+  }
