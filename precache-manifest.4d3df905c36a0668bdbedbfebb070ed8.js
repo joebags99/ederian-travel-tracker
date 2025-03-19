@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a773576bba29d6d95f50f40c5e6265e",
+    "revision": "e204bd30b653c7ada33694ea1d969410",
     "url": "/ederian-travel-tracker/index.html"
   },
   {
-    "revision": "7514a1fb664571e82817",
+    "revision": "d35ceb286515c0f804ad",
     "url": "/ederian-travel-tracker/static/css/main.4a1d8ed7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ederian-travel-tracker/static/js/3.af8ed0c7.chunk.js"
   },
   {
-    "revision": "7514a1fb664571e82817",
-    "url": "/ederian-travel-tracker/static/js/main.51ac3a7a.chunk.js"
+    "revision": "d35ceb286515c0f804ad",
+    "url": "/ederian-travel-tracker/static/js/main.d3029fe8.chunk.js"
   },
   {
     "revision": "9bcbebe0d69ad9066b3b",
