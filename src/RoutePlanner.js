@@ -566,21 +566,11 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
   useEffect(() => {
     const loadTravelData = async () => {
       try {
-        // Try to load from public/data directory
-        const response = await fetch('/data/travel-times.json');
+        // Use PUBLIC_URL to create the correct path
+        const response = await fetch(`${process.env.PUBLIC_URL}/data/travel-times.json`);
         if (!response.ok) {
           console.warn('Could not load travel times from /data. Status:', response.status);
-          
-          // If that fails, try to load from the src/data directory (requires webpack)
-          try {
-            const module = await import('../data/travel-times.json');
-            setCityGraph(module.default || module);
-            console.log('Loaded travel times from src/data directory');
-            return;
-          } catch (importError) {
-            console.warn('Could not import travel times:', importError);
-            console.log('Using default city graph data');
-          }
+          console.log('Using default city graph data');
           return;
         }
         
