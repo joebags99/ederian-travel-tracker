@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ederian-travel-tracker/static/css/main.4a1d8ed7.chunk.css",
-    "main.js": "/ederian-travel-tracker/static/js/main.f66a9e83.chunk.js",
-    "main.js.map": "/ederian-travel-tracker/static/js/main.f66a9e83.chunk.js.map",
+    "main.js": "/ederian-travel-tracker/static/js/main.fd5960ea.chunk.js",
+    "main.js.map": "/ederian-travel-tracker/static/js/main.fd5960ea.chunk.js.map",
     "runtime-main.js": "/ederian-travel-tracker/static/js/runtime-main.5a2291aa.js",
     "runtime-main.js.map": "/ederian-travel-tracker/static/js/runtime-main.5a2291aa.js.map",
     "static/js/2.2c6d8870.chunk.js": "/ederian-travel-tracker/static/js/2.2c6d8870.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.691db69f.chunk.js": "/ederian-travel-tracker/static/js/3.691db69f.chunk.js",
     "static/js/3.691db69f.chunk.js.map": "/ederian-travel-tracker/static/js/3.691db69f.chunk.js.map",
     "index.html": "/ederian-travel-tracker/index.html",
-    "precache-manifest.c75a44f3a39f638eefef494a98153b82.js": "/ederian-travel-tracker/precache-manifest.c75a44f3a39f638eefef494a98153b82.js",
+    "precache-manifest.641cf05ea7cf1a7936f18c076ef4e54e.js": "/ederian-travel-tracker/precache-manifest.641cf05ea7cf1a7936f18c076ef4e54e.js",
     "service-worker.js": "/ederian-travel-tracker/service-worker.js",
     "static/css/main.4a1d8ed7.chunk.css.map": "/ederian-travel-tracker/static/css/main.4a1d8ed7.chunk.css.map",
     "static/js/2.2c6d8870.chunk.js.LICENSE.txt": "/ederian-travel-tracker/static/js/2.2c6d8870.chunk.js.LICENSE.txt"
@@ -19,6 +19,6 @@
     "static/js/runtime-main.5a2291aa.js",
     "static/js/2.2c6d8870.chunk.js",
     "static/css/main.4a1d8ed7.chunk.css",
-    "static/js/main.f66a9e83.chunk.js"
+    "static/js/main.fd5960ea.chunk.js"
   ]
 }
