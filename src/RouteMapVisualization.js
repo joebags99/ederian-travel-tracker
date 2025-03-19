@@ -269,14 +269,16 @@ function RouteMapVisualization({ route, cityGraph }) {
   }, [route, cityGraph]);
   
   return (
-    <div className="mt-6 p-5 bg-gray-900 rounded-lg border-2 border-amber-700">
+    <div className="bg-gray-900 rounded-lg border-2 border-amber-700 p-5 h-full flex flex-col">
       <h3 className="text-xl font-bold text-amber-400 mb-3">Route Map</h3>
-      <canvas 
-        ref={canvasRef} 
-        width={480} 
-        height={320} 
-        className="w-full h-auto rounded-md border border-gray-700"
-      />
+      <div className="flex-grow flex items-center justify-center">
+        <canvas 
+          ref={canvasRef} 
+          width={480} 
+          height={320} 
+          className="w-full h-auto rounded-md border border-gray-700 max-w-full"
+        />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Map, Navigation, Clock, DollarSign, Compass, PlaneTakeoff } from 'lucide-react';
+import { Map, Navigation, Clock, DollarSign, Compass, PlaneTakeoff, ChevronRight, ChevronDown } from 'lucide-react';
 import RouteMapVisualization from './RouteMapVisualization';
 
 // We'll replace this with data loaded from the JSON file
@@ -562,6 +562,7 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
   const [prioritize, setPrioritize] = useState('time');
   const [route, setRoute] = useState(null);
   const [cityGraph, setCityGraph] = useState(defaultCityGraph);
+  const [resultsCollapsed, setResultsCollapsed] = useState(false); // Add this line
   
   // Load travel times data from JSON file
   useEffect(() => {
@@ -831,95 +832,90 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
       
       
       {route && route.valid && (
-        <div className="mt-6 p-5 bg-gray-900 rounded-lg border-2 border-amber-700">
-          <h3 className="text-xl font-bold text-amber-400 mb-3">Route Details</h3>
-          
-          <div className="space-y-3 mb-5">
-            <div className="text-lg">
-              <span className="text-amber-300 font-medium">Path: </span>
-              <span className="text-white">{route.path.join(" → ")}</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-amber-300 font-medium">Total Distance: </span>
-              <span className="text-white">{route.segments.reduce((total, segment) => total + segment.distance, 0)} miles</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-amber-300 font-medium">Total Travel Time: </span>
-              <span className="text-white">{formatTime(route.totalTime)}</span>
-            </div>
-            
-            <div className="text-lg">
-              <span className="text-amber-300 font-medium">Estimated Cost: </span>
-              <span className="text-white">{formatCost(route.totalCost)}</span>
-            </div>
+        <div className="mt-6">
+          <div className="bg-gray-900 rounded-lg border-2 border-amber-700 p-4 mb-2">
+            <button 
+              className="w-full flex items-center justify-between font-bold text-lg text-amber-400"
+              onClick={() => setResultsCollapsed(!resultsCollapsed)}
+            >
+              <span className="flex items-center">
+                <Map size={20} className="mr-2" />
+                Route Results
+              </span>
+              <span className="bg-gray-800 rounded-full p-1">
+                {resultsCollapsed ? 
+                  <ChevronRight size={20} /> : 
+                  <ChevronDown size={20} />
+                }
+              </span>
+            </button>
           </div>
           
-          {route.segments && route.segments.length > 0 && (
-            <div>
-              <h4 className="text-lg font-semibold text-amber-400 mb-3">Segment Details</h4>
-              <div className="space-y-3 max-h-64 overflow-y-auto pr-2 pb-1">
-                {route.segments.map((segment, index) => {
-                  // Safely access travel data with null checks
-                  const standardModes = travelData?.travel?.standard || [];
-                  const premiumModes = travelData?.travel?.premium || [];
-                  const modeData = [...standardModes, ...premiumModes]
-                    .find(item => item && item.id === segment.mode);
+          {!resultsCollapsed && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {/* Route Details Panel */}
+              <div className="bg-gray-900 rounded-lg border-2 border-amber-700 p-5">
+                <h3 className="text-xl font-bold text-amber-400 mb-3">Route Details</h3>
+                
+                <div className="space-y-3 mb-5">
+                  <div className="text-lg">
+                    <span className="text-amber-300 font-medium">Path: </span>
+                    <span className="text-white">{route.path.join(" → ")}</span>
+                  </div>
                   
-                  const speed = getTransportSpeed(segment.mode, travelData);
-                  const segmentTime = segment.distance / speed;
-                  const segmentCost = calculateSegmentCost(
-                    segment.mode,
-                    segment.distance,
-                    travelData,
-                    playerCount
-                  );
+                  <div className="text-lg">
+                    <span className="text-amber-300 font-medium">Total Distance: </span>
+                    <span className="text-white">{route.segments.reduce((total, segment) => total + segment.distance, 0)} miles</span>
+                  </div>
                   
-                  return (
-                    <div key={index} className="bg-gray-800 p-4 rounded-md border border-gray-700">
-                      <div className="flex justify-between text-base">
-                        <span className="text-white font-medium">
-                          {segment.from} → {segment.to}
-                        </span>
-                        <span className="text-amber-400 font-bold">
-                          {segment.distance} miles
-                        </span>
-                      </div>
-                      {modeData && (
-                        <div className="mt-2">
-                          <span className="text-white flex items-center text-base">
-                            <span className="mr-2 text-xl">{modeData.image}</span> 
-                            <span className="font-medium">{modeData.name}</span> <span className="ml-2 text-gray-300">({modeData.speed})</span>
-                          </span>
-                          <div className="flex justify-between text-sm mt-2 text-gray-200">
-                            <span><span className="text-amber-300">Time:</span> {formatTime(segmentTime)}</span>
-                            <span><span className="text-amber-300">Cost:</span> {formatCost(segmentCost)}</span>
+                  <div className="text-lg">
+                    <span className="text-amber-300 font-medium">Total Travel Time: </span>
+                    <span className="text-white">{formatTime(route.totalTime)}</span>
+                  </div>
+                  
+                  <div className="text-lg">
+                    <span className="text-amber-300 font-medium">Estimated Cost: </span>
+                    <span className="text-white">{formatCost(route.totalCost)}</span>
+                  </div>
+                </div>
+                
+                {route.segments && route.segments.length > 0 && (
+                  <div>
+                    <h4 className="text-lg font-semibold text-amber-400 mb-3">Segment Details</h4>
+                    <div className="space-y-3 max-h-64 overflow-y-auto pr-2 pb-1">
+                      {route.segments.map((segment, index) => (
+                        <div key={index} className="bg-gray-800 p-3 rounded-md border border-gray-700">
+                          <div className="text-amber-300 font-medium">{segment.from} → {segment.to}</div>
+                          <div className="text-white">
+                            <span className="text-gray-400">Transport:</span> {segment.mode}
+                          </div>
+                          <div className="text-white">
+                            <span className="text-gray-400">Distance:</span> {segment.distance} miles
                           </div>
                         </div>
-                      )}
+                      ))}
                     </div>
-                  );
-                })}
+                  </div>
+                )}
+                
+                {addToCart && (
+                  <button
+                    className="w-full mt-5 bg-gray-700 hover:bg-gray-600 font-bold py-3 rounded-lg flex items-center justify-center text-white text-base border border-gray-500 transition-colors duration-200"
+                    onClick={addRouteToCart}
+                  >
+                    <PlaneTakeoff size={18} className="mr-2" />
+                    Add Travel Options to Cart
+                  </button>
+                )}
+              </div>
+              
+              {/* Route Map Panel */}
+              <div>
+                <RouteMapVisualization route={route} cityGraph={cityGraph} />
               </div>
             </div>
           )}
-          
-          {addToCart && (
-            <button
-              className="w-full mt-5 bg-gray-700 hover:bg-gray-600 font-bold py-3 rounded-lg flex items-center justify-center text-white text-base border border-gray-500 transition-colors duration-200"
-              onClick={addRouteToCart}
-            >
-              <PlaneTakeoff size={18} className="mr-2" />
-              Add Travel Options to Cart
-            </button>
-          )}
         </div>
-      )}
-      
-      {/* Add the RouteMapVisualization component here */}
-      {route && route.valid && (
-        <RouteMapVisualization route={route} cityGraph={cityGraph} />
       )}
       
       {route && !route.valid && (
