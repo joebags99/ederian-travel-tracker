@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/ederian-travel-tracker/static/css/main.4a1d8ed7.chunk.css",
-    "main.js": "/ederian-travel-tracker/static/js/main.44ea4719.chunk.js",
-    "main.js.map": "/ederian-travel-tracker/static/js/main.44ea4719.chunk.js.map",
-    "runtime-main.js": "/ederian-travel-tracker/static/js/runtime-main.47f223c4.js",
-    "runtime-main.js.map": "/ederian-travel-tracker/static/js/runtime-main.47f223c4.js.map",
-    "static/js/2.19635cfa.chunk.js": "/ederian-travel-tracker/static/js/2.19635cfa.chunk.js",
-    "static/js/2.19635cfa.chunk.js.map": "/ederian-travel-tracker/static/js/2.19635cfa.chunk.js.map",
-    "static/js/3.c6406260.chunk.js": "/ederian-travel-tracker/static/js/3.c6406260.chunk.js",
-    "static/js/3.c6406260.chunk.js.map": "/ederian-travel-tracker/static/js/3.c6406260.chunk.js.map",
+    "main.js": "/ederian-travel-tracker/static/js/main.42a5f1b5.chunk.js",
+    "main.js.map": "/ederian-travel-tracker/static/js/main.42a5f1b5.chunk.js.map",
+    "runtime-main.js": "/ederian-travel-tracker/static/js/runtime-main.19d6f3af.js",
+    "runtime-main.js.map": "/ederian-travel-tracker/static/js/runtime-main.19d6f3af.js.map",
+    "static/js/2.3ee17cf8.chunk.js": "/ederian-travel-tracker/static/js/2.3ee17cf8.chunk.js",
+    "static/js/2.3ee17cf8.chunk.js.map": "/ederian-travel-tracker/static/js/2.3ee17cf8.chunk.js.map",
+    "static/js/3.af8ed0c7.chunk.js": "/ederian-travel-tracker/static/js/3.af8ed0c7.chunk.js",
+    "static/js/3.af8ed0c7.chunk.js.map": "/ederian-travel-tracker/static/js/3.af8ed0c7.chunk.js.map",
     "index.html": "/ederian-travel-tracker/index.html",
-    "precache-manifest.36fa88f77822bcebd7fdadb234e669b9.js": "/ederian-travel-tracker/precache-manifest.36fa88f77822bcebd7fdadb234e669b9.js",
+    "precache-manifest.535a4d3fe0423128981e45bdc940f37a.js": "/ederian-travel-tracker/precache-manifest.535a4d3fe0423128981e45bdc940f37a.js",
     "service-worker.js": "/ederian-travel-tracker/service-worker.js",
     "static/css/main.4a1d8ed7.chunk.css.map": "/ederian-travel-tracker/static/css/main.4a1d8ed7.chunk.css.map",
-    "static/js/2.19635cfa.chunk.js.LICENSE.txt": "/ederian-travel-tracker/static/js/2.19635cfa.chunk.js.LICENSE.txt"
+    "static/js/2.3ee17cf8.chunk.js.LICENSE.txt": "/ederian-travel-tracker/static/js/2.3ee17cf8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.47f223c4.js",
-    "static/js/2.19635cfa.chunk.js",
+    "static/js/runtime-main.19d6f3af.js",
+    "static/js/2.3ee17cf8.chunk.js",
     "static/css/main.4a1d8ed7.chunk.css",
-    "static/js/main.44ea4719.chunk.js"
+    "static/js/main.42a5f1b5.chunk.js"
   ]
 }
