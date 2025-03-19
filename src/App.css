@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* App.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.scrollbar-thumb-gray-700::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Transition animation for cart sidebar */
+.translate-x-0 {
+  transform: translateX(0);
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Basic utility classes */
+.bg-gray-900 {
+  background-color: #111827;
+}
+
+.bg-gray-800 {
+  background-color: #1F2937;
+}
+
+.bg-gray-700 {
+  background-color: #374151;
+}
+
+.bg-amber-600 {
+  background-color: #D97706;
+}
+
+.bg-amber-700 {
+  background-color: #B45309;
+}
+
+.hover\:bg-gray-700:hover {
+  background-color: #374151;
+}
+
+.hover\:bg-gray-600:hover {
+  background-color: #4B5563;
+}
+
+.hover\:bg-amber-700:hover {
+  background-color: #B45309;
+}
+
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-gray-400 {
+  color: #9CA3AF;
+}
+
+.text-gray-300 {
+  color: #D1D5DB;
+}
+
+.text-amber-500 {
+  color: #F59E0B;
+}
+
+.text-amber-400 {
+  color: #FBBF24;
+}
+
+.border-gray-700 {
+  border-color: #374151;
+}
+
+.border-gray-600 {
+  border-color: #4B5563;
+}
+
+.border-amber-700 {
+  border-color: #B45309;
+}
+
+.hover\:border-amber-600:hover {
+  border-color: #D97706;
+}
+
+.hover\:text-white:hover {
+  color: #FFFFFF;
+}
+
+.hover\:text-red-500:hover {
+  color: #EF4444;
 }
