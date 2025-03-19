@@ -813,7 +813,7 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
       </div>
       
       <button 
-        className="w-full bg-amber-500 hover:bg-amber-600 font-bold py-3 px-4 rounded-lg flex items-center justify-center text-black text-lg shadow-md transition-colors duration-200"
+        className="w-full bg-amber-600 hover:bg-amber-700 font-bold py-3 px-4 rounded-lg flex items-center justify-center text-black text-lg shadow-md transition-colors duration-200"
         onClick={calculateRoute}
         disabled={!origin || !destination}
       >
