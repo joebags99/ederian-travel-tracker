@@ -230,7 +230,8 @@ function calculateSegmentCost(transportMode, distance, travelData, playerCount) 
   if (!modeData) return 0;
   
   const speed = getTransportSpeed(transportMode, travelData);
-  const daysRequired = distance / speed;
+  // Round up to full days for cost calculation purposes
+  const daysRequired = Math.ceil(distance / speed);
   
   let cost = 0;
   const costUnit = modeData.costUnit || '';
