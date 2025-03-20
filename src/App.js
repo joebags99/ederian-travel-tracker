@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Scroll, ShoppingCart, Menu, X, ChevronRight, Minus, Plus, Info, Shield, Ship, Map, Home, Sparkles, Crown, Coffee } from 'lucide-react';
 import './App.css';
 import RoutePlanner from './RoutePlanner';
+import RequisitionOrder from './RequisitionOrder';
 
 function App() {
   // State management
@@ -12,6 +13,7 @@ function App() {
   const [playerCount, setPlayerCount] = useState(5); // Default 5 player characters
   const [standardDaysEnabled, setStandardDaysEnabled] = useState(false);
   const [standardDays, setStandardDays] = useState(7); // Default 7 days
+  const [showRequisition, setShowRequisition] = useState(false);
   
   // Data structure for all travel options and services
   const travelData = {
@@ -718,7 +720,10 @@ function App() {
                 <p className="text-xs text-gray-400">All requisitions by the King's Hand must be properly documented and submitted to the Royal Treasurer's office within 30 days.</p>
               </div>
               
-              <button className="w-full bg-amber-600 hover:bg-amber-700 font-bold py-2 rounded-lg mt-4 flex items-center justify-center">
+              <button 
+                className="w-full bg-amber-600 hover:bg-amber-700 font-bold py-2 rounded-lg mt-4 flex items-center justify-center"
+                onClick={() => setShowRequisition(true)}
+              >
                 <Scroll size={16} className="mr-2" />
                 Generate Requisition Order
               </button>
@@ -756,7 +761,17 @@ function App() {
             <ChevronRight size={16} />
           </button>
         </div>
-      </footer>
+        </footer>
+      
+      {/* Requisition Order Modal */}
+      <RequisitionOrder 
+        isOpen={showRequisition}
+        onClose={() => setShowRequisition(false)}
+        cart={cart}
+        playerCount={playerCount}
+        totalCost={calculateTotal()}
+        formatCost={formatCost}
+      />
     </div>
   );
 }
