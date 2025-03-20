@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { X } from 'lucide-react';
+import { X, Download } from 'lucide-react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, formatCost }) => {
   // Prevent scroll on body when modal is open
@@ -16,6 +18,30 @@ const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, forma
 
   // Reference for print functionality
   const printRef = useRef();
+
+  // Add PDF download functionality
+  const handleDownloadPDF = () => {
+    const content = printRef.current;
+    
+    html2canvas(content, { 
+      scale: 1.5, // Higher quality
+      useCORS: true, // Allow images from other domains
+      allowTaint: true
+    }).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+      const imgY = 30;
+      
+      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+      pdf.save(`Ederian_Requisition_${requisitionNumber}.pdf`);
+    });
+  };
 
   // If not open, don't render anything
   if (!isOpen) return null;
@@ -57,10 +83,10 @@ const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, forma
   }, {});
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 overflow-y-auto">
       <div 
         ref={printRef}
-        className="bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-lg relative"
+        className="bg-parchment text-gray-900 rounded-lg p-8 w-full max-w-4xl max-h-[90vh] h-full overflow-y-auto"
         style={{
           backgroundImage: `url('https://i.imgur.com/z1c8f4g.jpeg')`,
           backgroundSize: 'cover',
@@ -68,13 +94,24 @@ const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, forma
           color: '#3A2921'
         }}
       >
-        {/* Close button */}
-        <button 
-          onClick={onClose} 
-          className="absolute top-4 right-4 p-1 rounded-full bg-gray-800 text-white hover:bg-gray-700"
-        >
-          <X size={20} />
-        </button>
+        {/* Control buttons */}
+        <div className="absolute top-4 right-4 flex space-x-3">
+          <button 
+            onClick={handleDownloadPDF} 
+            className="p-2 rounded-full bg-amber-700 text-white hover:bg-amber-600 flex items-center gap-1"
+            title="Download as PDF"
+          >
+            <Download size={18} />
+            <span className="text-sm">PDF</span>
+          </button>
+          <button 
+            onClick={onClose} 
+            className="p-1 rounded-full bg-gray-800 text-white hover:bg-gray-700"
+            title="Close"
+          >
+            <X size={20} />
+          </button>
+        </div>
 
         <div className="p-10 md:p-16">
           {/* Header */}
@@ -165,12 +202,14 @@ const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, forma
           <div className="mt-10 flex justify-between">
             <div className="text-center">
               <div className="border-t border-amber-900 border-opacity-50 mt-8 pt-1 w-40">
-                Authorized Signature
+                <div className="font-medium">Edwinn Falkrest</div>
+                <div className="text-sm opacity-70">Of the King's Hand</div>
               </div>
             </div>
             <div className="text-center">
               <div className="border-t border-amber-900 border-opacity-50 mt-8 pt-1 w-40">
-                Treasury Approval
+                <div className="font-medium">Alarice Eldran</div>
+                <div className="text-sm opacity-70">King's Hand Representative</div>
               </div>
             </div>
           </div>
