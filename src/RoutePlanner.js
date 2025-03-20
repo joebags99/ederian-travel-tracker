@@ -719,17 +719,19 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
           id: `${segment.mode}-${segment.from}-${segment.to}`, // Create unique ID for each segment
           segmentInfo: `${segment.from} → ${segment.to} (${segment.distance} miles)`,
           days: days, // Add the calculated days
-          preserveDays: true // Flag to preserve days value
+          preserveDays: true, // Flag to preserve days value
+          routeSegment: true // Flag to identify this as part of a route
         };
       }
       return null;
     }).filter(item => item !== null);
     
-    // Add all items to cart at once
-    if (addToCart && itemsToAdd.length > 0) {
-      // Add each item to cart
-      itemsToAdd.forEach(item => addToCart(item));
-    }
+    // Add each item individually to the cart
+    itemsToAdd.forEach(item => {
+      if (addToCart && typeof addToCart === 'function') {
+        addToCart(item);
+      }
+    });
   };
   
   return (
