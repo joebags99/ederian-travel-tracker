@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ederian-travel-tracker/precache-manifest.641cf05ea7cf1a7936f18c076ef4e54e.js"
+  "/ederian-travel-tracker/precache-manifest.56f7797cfb5c11491e29652bd0c42646.js"
 );
 
 self.addEventListener('message', (event) => {
