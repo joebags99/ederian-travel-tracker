@@ -133,10 +133,43 @@ function App() {
   };
 
   // Add item to cart
-  const addToCart = (item) => {
+  const addToCart = (item, isMultiple = false) => {
     // Skip if it's just an informational item
     if (item.isInfo) return;
     
+    // Handle array of items
+    if (isMultiple && Array.isArray(item)) {
+      // Add all items at once
+      setCart(prevCart => {
+        const newCart = [...prevCart];
+        
+        item.forEach(singleItem => {
+          const existingItemIndex = newCart.findIndex(cartItem => cartItem.id === singleItem.id);
+          const daysValue = singleItem.preserveDays ? singleItem.days : (standardDaysEnabled ? standardDays : 1);
+          
+          let itemToAdd = { ...singleItem };
+          if (itemToAdd.customizablePrice) {
+            itemToAdd.customPriceValue = itemToAdd.cost;
+          }
+          
+          if (existingItemIndex >= 0) {
+            newCart[existingItemIndex].quantity += 1;
+          } else {
+            newCart.push({ 
+              ...itemToAdd, 
+              quantity: 1, 
+              days: daysValue, 
+              people: itemToAdd.perPerson ? 1 : 0 
+            });
+          }
+        });
+        
+        return newCart;
+      });
+      return;
+    }
+    
+    // Original code for single item
     const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
     
     // Set days value based on standardDaysEnabled setting or preserve item's days if flagged

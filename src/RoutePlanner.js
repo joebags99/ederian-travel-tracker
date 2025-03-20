@@ -726,12 +726,10 @@ function RoutePlanner({ travelData = {}, playerCount = 1, addToCart }) {
       return null;
     }).filter(item => item !== null);
     
-    // Add each item individually to the cart
-    itemsToAdd.forEach(item => {
-      if (addToCart && typeof addToCart === 'function') {
-        addToCart(item);
-      }
-    });
+    // Add all items at once to avoid React state batching issues
+    if (addToCart && itemsToAdd.length > 0) {
+      addToCart(itemsToAdd, true);
+    }
   };
   
   return (
