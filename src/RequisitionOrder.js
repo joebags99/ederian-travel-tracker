@@ -3,6 +3,11 @@ import { X, Download } from 'lucide-react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
+// Add this style import
+const fontImportStyle = `
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap');
+`;
+
 const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, formatCost }) => {
   // Prevent scroll on body when modal is open
   useEffect(() => {
@@ -84,6 +89,9 @@ const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, forma
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 overflow-y-auto">
+      {/* Add the style tag with the font imports */}
+      <style>{fontImportStyle}</style>
+      
       <div 
         ref={printRef}
         className="bg-parchment text-gray-900 rounded-lg p-8 w-full max-w-4xl max-h-[90vh] h-full overflow-y-auto"
@@ -202,14 +210,18 @@ const RequisitionOrder = ({ isOpen, onClose, cart, playerCount, totalCost, forma
           <div className="mt-10 flex justify-between">
             <div className="text-center">
               <div className="border-t border-amber-900 border-opacity-50 mt-8 pt-1 w-40">
-                <div className="font-medium">Edwinn Falkrest</div>
-                <div className="text-sm opacity-70">Of the King's Hand</div>
+                <div className="font-medium" style={{ fontFamily: "'Dancing Script', cursive", fontSize: '1.5rem' }}>
+                  Edwinn Falkrest
+                </div>
+                <div className="text-sm opacity-70">Treasurer of the King's Hand</div>
               </div>
             </div>
             <div className="text-center">
               <div className="border-t border-amber-900 border-opacity-50 mt-8 pt-1 w-40">
-                <div className="font-medium">Alarice Eldran</div>
-                <div className="text-sm opacity-70">King's Hand Representative</div>
+                <div className="font-medium" style={{ fontFamily: "'Great Vibes', cursive", fontSize: '1.5rem' }}>
+                  Alarice Eldran
+                </div>
+                <div className="text-sm opacity-70">Chancellor of the Treasurer</div>
               </div>
             </div>
           </div>
